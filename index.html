@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Glen Phillips/TTWS Song Title Generator</title>
+
+    <script language="javascript" src="ttws.js"></script>
+
+    <style type="text/css">
+      <!--
+          BODY {
+          background-color: rgb(247, 249, 227);
+          font-family: "Helvetica",Arial,Helvetica,Tahoma,sans-serif;
+          font-size: 18px;
+          line-height: 26px;
+          margin-bottom: 60px;
+          font-weight: normal;
+          text-rendering: optimizelegibility;
+          }
+
+          h1 {
+          font-size: 30px;
+          line-height: 42px;
+          font-family: "Helvetica",Arial,Helvetica,Tahoma,sans-serif;
+          margin: 10px 0px;
+          }
+
+          a.sf-button {
+          display: inline-block;
+          font-size: 12px;
+          line-height: 18px;
+          height: auto;
+          padding: 6px 12px;
+          margin: 0px 20px 20px 0px;
+          border-radius: 0px;
+          transition: all 0.3s ease-out 0s;
+          border: 0px none;
+          outline: medium none;
+          text-shadow: none;
+          text-decoration: none;
+          font-weight: normal;
+          }
+          a.sf-button.slightlyroundedarrow {
+          border-radius: 8px;
+          }
+          .sf-button.accent {
+          color: rgb(255, 255, 255);
+          background-color: rgb(89, 198, 217) !important;
+          background: none repeat scroll 0% 0% transparent;
+          }
+
+          .page-heading {
+          background-color: rgb(241, 89, 42);
+          padding-top: 30px;
+          padding-bottom: 30px;
+          margin-top: 0px;
+          margin-bottom: 0px !important;
+          position: relative;
+          text-align: center;
+          border-bottom: 1px solid transparent;
+          border-top: 0px none !important;
+          }
+          .page-heading h1 {
+          color: rgb(255, 255, 255);
+          }
+
+          .spacer {
+          padding-top: 30px;
+          padding-bottom: 30px;
+          margin-top: 0px;
+          margin-bottom: 0px !important;
+          position: relative;
+          text-align: center;
+          border-bottom: 1px solid transparent;
+          border-top: 0px none !important;
+          }
+          .smallspacer {
+          padding-top: 15px;
+          padding-bottom: 15px;
+          margin-top: 0px;
+          margin-bottom: 0px !important;
+          position: relative;
+          text-align: center;
+          border-bottom: 1px solid transparent;
+          border-top: 0px none !important;
+          }
+
+          #copyright {
+          font-size: 12px;
+          height: 80px;
+          background-color: rgb(89, 198, 217);
+          border-top-color: rgb(51, 51, 51);
+          padding: 15px 0px;
+          -moz-box-sizing: border-box;
+          height: auto;
+          overflow: hidden;
+          font-size: 12px;
+          border-top: 0px solid transparent;
+          }
+
+          .container {
+          width: 940px;
+          margin-left: auto;
+          margin-right: auto;
+          }
+        -->
+    </style>
+
+  </head>
+  <body onload="ready()">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="page-heading">
+      <div class="container">
+        <h1>Glen Phillips' New Song!</h1>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="container">
+      <div id="generated_title"></div>
+      <div class="smallspacer"></div>
+      <a class="sf-button small accent slightlyroundedarrow" target="_self" href="javascript:generate();">
+        <span>
+          See another new song!
+        </span>
+      </a>
+      <!--
+      <a class="sf-button small accent slightlyroundedarrow" target="_self" href="javascript:most_popular_title();">
+        <span>
+          See what's popular!
+        </span>
+      </a>
+      -->
+      <a class="sf-button small accent slightlyroundedarrow" target="_self" href="javascript:force_word();">
+        <span>
+          Suggest a word!
+        </span>
+      </a>
+    </div>
+    <footer id="copyright" class="copyright">
+      <div class="container">
+        <div id="column1" style="float:left; margin:0;">
+          <p>
+            <a href="http://www.glenphillips.com/">Glen Phillips</a> had nothing to do with making this. But he's cool. Buy his stuff.
+          </p>
+        </div>
+        <div id="column2" style="float:right; margin:0;">
+          <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          <br>
+          <!-- Place this tag where you want the +1 button to render. -->
+          <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300" data-href="http://www.rebeccadeane.com/glen/"></div>
+
+          <!-- Place this tag after the last +1 button tag. -->
+          <script type="text/javascript">
+            (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/platform.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+          </script>
+          <br>
+            <fb:share-button href="http://www.rebeccadeane.com/glen/" type="button_count"></fb:share-button>
+        </div>
+
+      </div>
+    </footer>
+  </body>
+</html>
